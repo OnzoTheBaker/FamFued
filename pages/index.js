@@ -48,7 +48,7 @@ export default function Home() {
     if (ws.current?.readyState !== 1 || !ws.current) {
       console.log("connecting to server... new connection");
       fetch("/api/ws").then(() => {
-        ws.current = new WebSocket(`wss://${window.location.host}/api/ws`);
+        ws.current = new WebSocket(`https://git.heroku.com/young-everglades-15243.git`);
         ws.current.onopen = function() {
           console.debug("game connected to server", ws.current);
 
